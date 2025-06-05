@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Error Page</title>
+    <link rel="icon" href="../Images/GamerWorm-removebg-preview.png" />
+    <link rel="stylesheet" href="/ErrorHandling/Errorstylesheet.css" />
+    <!-- Link to your CSS file -->
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <img src="../Images/Sad Worker.png" alt="Logo" />
+      </div>
+      <h1>Error Occurred</h1>
+      <p class="error-message" th:text="${errorMsg}"></p>
+      <a href="/" class="home-link">Go to Homepage</a>
+    </div>
+  </body>
+</html>

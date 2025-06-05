@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+  <head>
+    <title>Invoice Page</title>
+    <link rel="icon" href="../Images/GamerWorm-removebg-preview.png" />
+    <link rel="stylesheet" href="/Invoice/InvoiceInfoStyle.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="circle-logo">
+          <img src="../Images/GamerWorm-removebg-preview.png" alt="Logo" />
+        </div>
+        <h2>Invoice</h2>
+        <p class="invoice-title" th:text="'#' + ${invoice.id}"></p>
+      </div>
+      <div class="main-content">
+        <div class="logo">
+          <div class="logo">
+            <img th:src="${invoice.imageUrl}" alt="Logo" />
+          </div>
+        </div>
+
+        <div class="info-container">
+          <div
+            class="info-item"
+            th:text="'Customer Name: ' +${invoice.name}"
+          ></div>
+          <div
+            class="info-item"
+            th:text="'Address: ' +${invoice.street} + ' ' + ${invoice.city}"
+          ></div>
+          <div class="info-item" th:text="'Item ID: ' +${invoice.itemId}"></div>
+          <div class="info-item" th:text="'Item: ' +${invoice.itemType}"></div>
+          <div
+            class="info-item"
+            th:text="'Quantity: '+${invoice.quantity}"
+          ></div>
+          <div
+            class="info-item"
+            th:text="'Total Order: $'+${invoice.total} "
+          ></div>
+        </div>
+      </div>
+      <div class="button-container">
+        <div class="long-container">
+          <p>
+            Thank you for your purchase! We hope you enjoy your new item. Your
+            support keeps Wormhole Gaming thriving. We appreciate you being part
+            of our gaming community! :^)
+          </p>
+        </div>
+      </div>
+      <a href="/" class="home-link">Go to Homepage</a>
+    </div>
+  </body>
+</html>
